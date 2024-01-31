@@ -3685,6 +3685,20 @@ textarea:focus::placeholder {
   transition: all 0.5s ease 0s;
 }
 
+.cases-hero-tabs__link:active {
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.cases-hero-tabs__link:active .cases-hero-tabs__name {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
 .client-testmonials {
   padding-top: 6rem;
   padding-bottom: 6rem;
