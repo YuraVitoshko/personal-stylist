@@ -3656,6 +3656,8 @@ textarea:focus::placeholder {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .cases-hero-tabs__link img {
@@ -3678,25 +3680,6 @@ textarea:focus::placeholder {
           transform: translateX(-120%);
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-}
-
-.cases-hero-tabs__link {
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-}
-
-.cases-hero-tabs__link:active {
-  -webkit-transform: scale(0.95);
-      -ms-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
-.cases-hero-tabs__link:active .cases-hero-tabs__name {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
 }
 
 .client-testmonials {
@@ -4724,6 +4707,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .cases-hero-tabs__wrapper {
     -ms-grid-columns: (1)[2];
     grid-template-columns: repeat(2, 1);
+  }
+
+  .cases-hero-tabs__link:active {
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+
+  .cases-hero-tabs__link:active .cases-hero-tabs__name {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
