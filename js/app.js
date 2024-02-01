@@ -1265,6 +1265,9 @@
             if (target.hidden) return _slideDown(target, duration); else return _slideUp(target, duration);
         };
         let bodyLockStatus = true;
+        let bodyLockToggle = (delay = 500) => {
+            if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+        };
         let bodyUnlock = (delay = 500) => {
             let body = document.querySelector("body");
             if (bodyLockStatus) {
@@ -1277,6 +1280,22 @@
                     body.style.paddingRight = "0px";
                     document.documentElement.classList.remove("lock");
                 }), delay);
+                bodyLockStatus = false;
+                setTimeout((function() {
+                    bodyLockStatus = true;
+                }), delay);
+            }
+        };
+        let bodyLock = (delay = 500) => {
+            let body = document.querySelector("body");
+            if (bodyLockStatus) {
+                let lock_padding = document.querySelectorAll("[data-lp]");
+                for (let index = 0; index < lock_padding.length; index++) {
+                    const el = lock_padding[index];
+                    el.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+                }
+                body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+                document.documentElement.classList.add("lock");
                 bodyLockStatus = false;
                 setTimeout((function() {
                     bodyLockStatus = true;
@@ -1483,6 +1502,14 @@
                     e.preventDefault();
                 }
             }
+        }
+        function menuInit() {
+            if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
+                if (bodyLockStatus && e.target.closest(".icon-menu")) {
+                    bodyLockToggle();
+                    document.documentElement.classList.toggle("menu-open");
+                }
+            }));
         }
         function functions_menuClose() {
             bodyUnlock();
@@ -6781,6 +6808,90 @@ PERFORMANCE OF THIS SOFTWARE.
             }));
             modules_flsModules.gallery = galleyItems;
         }
+        class DynamicAdapt {
+            constructor(type) {
+                this.type = type;
+            }
+            init() {
+                this.оbjects = [];
+                this.daClassname = "_dynamic_adapt_";
+                this.nodes = [ ...document.querySelectorAll("[data-da]") ];
+                this.nodes.forEach((node => {
+                    const data = node.dataset.da.trim();
+                    const dataArray = data.split(",");
+                    const оbject = {};
+                    оbject.element = node;
+                    оbject.parent = node.parentNode;
+                    оbject.destination = document.querySelector(`${dataArray[0].trim()}`);
+                    оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767";
+                    оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
+                    оbject.index = this.indexInParent(оbject.parent, оbject.element);
+                    this.оbjects.push(оbject);
+                }));
+                this.arraySort(this.оbjects);
+                this.mediaQueries = this.оbjects.map((({breakpoint}) => `(${this.type}-width: ${breakpoint}px),${breakpoint}`)).filter(((item, index, self) => self.indexOf(item) === index));
+                this.mediaQueries.forEach((media => {
+                    const mediaSplit = media.split(",");
+                    const matchMedia = window.matchMedia(mediaSplit[0]);
+                    const mediaBreakpoint = mediaSplit[1];
+                    const оbjectsFilter = this.оbjects.filter((({breakpoint}) => breakpoint === mediaBreakpoint));
+                    matchMedia.addEventListener("change", (() => {
+                        this.mediaHandler(matchMedia, оbjectsFilter);
+                    }));
+                    this.mediaHandler(matchMedia, оbjectsFilter);
+                }));
+            }
+            mediaHandler(matchMedia, оbjects) {
+                if (matchMedia.matches) оbjects.forEach((оbject => {
+                    this.moveTo(оbject.place, оbject.element, оbject.destination);
+                })); else оbjects.forEach((({parent, element, index}) => {
+                    if (element.classList.contains(this.daClassname)) this.moveBack(parent, element, index);
+                }));
+            }
+            moveTo(place, element, destination) {
+                element.classList.add(this.daClassname);
+                if (place === "last" || place >= destination.children.length) {
+                    destination.append(element);
+                    return;
+                }
+                if (place === "first") {
+                    destination.prepend(element);
+                    return;
+                }
+                destination.children[place].before(element);
+            }
+            moveBack(parent, element, index) {
+                element.classList.remove(this.daClassname);
+                if (parent.children[index] !== void 0) parent.children[index].before(element); else parent.append(element);
+            }
+            indexInParent(parent, element) {
+                return [ ...parent.children ].indexOf(element);
+            }
+            arraySort(arr) {
+                if (this.type === "min") arr.sort(((a, b) => {
+                    if (a.breakpoint === b.breakpoint) {
+                        if (a.place === b.place) return 0;
+                        if (a.place === "first" || b.place === "last") return -1;
+                        if (a.place === "last" || b.place === "first") return 1;
+                        return 0;
+                    }
+                    return a.breakpoint - b.breakpoint;
+                })); else {
+                    arr.sort(((a, b) => {
+                        if (a.breakpoint === b.breakpoint) {
+                            if (a.place === b.place) return 0;
+                            if (a.place === "first" || b.place === "last") return 1;
+                            if (a.place === "last" || b.place === "first") return -1;
+                            return 0;
+                        }
+                        return b.breakpoint - a.breakpoint;
+                    }));
+                    return;
+                }
+            }
+        }
+        const da = new DynamicAdapt("max");
+        da.init();
         var intl_tel_input = __webpack_require__(699);
         const input = document.querySelector("#phone");
         intl_tel_input(input, {
@@ -6788,8 +6899,37 @@ PERFORMANCE OF THIS SOFTWARE.
             separateDialCode: true,
             utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.15/build/js/utils.js"
         });
+        document.addEventListener("DOMContentLoaded", (function() {
+            let subMenus = document.querySelectorAll(".menu__item--sub-menu");
+            subMenus.forEach((function(menuItem) {
+                menuItem.addEventListener("click", (function(event) {
+                    let submenu = this.querySelector(".menu__sub-list");
+                    if (submenu.classList.contains("active")) {
+                        submenu.classList.remove("active");
+                        this.classList.remove("active");
+                    } else {
+                        closeAllSubmenus();
+                        submenu.classList.add("active");
+                        this.classList.add("active");
+                    }
+                }));
+            }));
+            document.addEventListener("click", (function(event) {
+                if (!event.target.closest(".menu__item--sub-menu")) closeAllSubmenus();
+            }));
+            function closeAllSubmenus() {
+                subMenus.forEach((function(menuItem) {
+                    let submenu = menuItem.querySelector(".menu__sub-list");
+                    if (submenu) {
+                        submenu.classList.remove("active");
+                        menuItem.classList.remove("active");
+                    }
+                }));
+            }
+        }));
         window["FLS"] = false;
         isWebp();
+        menuInit();
         spollers();
         tabs();
         formFieldsInit({
