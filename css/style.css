@@ -678,7 +678,7 @@ textarea:focus::placeholder {
 }
 
 .iti--inline-dropdown .iti__country-list {
-  max-height: 185px;
+  max-height: 185px !important;
 }
 
 .iti--flexible-dropdown-width .iti__country-list {
