@@ -3212,6 +3212,19 @@ textarea:focus::placeholder {
 .contacts__form {
   max-width: 31.25rem;
   margin: 0 auto;
+  opacity: 0;
+  -webkit-transform: translateY(10%);
+      -ms-transform: translateY(10%);
+          transform: translateY(10%);
+  -webkit-transition: all 0.8s ease 0.1s;
+  transition: all 0.8s ease 0.1s;
+}
+
+.contacts__form._watcher-view {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .form-contacts {
@@ -3224,19 +3237,6 @@ textarea:focus::placeholder {
   display: -ms-grid;
   display: grid;
   gap: 0.25rem;
-  opacity: 0;
-  -webkit-transform: translateY(10%);
-      -ms-transform: translateY(10%);
-          transform: translateY(10%);
-  -webkit-transition: all 0.8s ease 0.1s;
-  transition: all 0.8s ease 0.1s;
-}
-
-.form-contacts__line._watcher-view {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
 }
 
 .form-contacts__label {
@@ -3248,17 +3248,6 @@ textarea:focus::placeholder {
 .form-contacts__button {
   -ms-grid-column-align: center;
       justify-self: center;
-  opacity: 0;
-  -webkit-transform: translateY(10%);
-      -ms-transform: translateY(10%);
-          transform: translateY(10%);
-}
-
-.form-contacts__button._watcher-view {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
 }
 
 .instagram {
