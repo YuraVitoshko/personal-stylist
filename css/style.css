@@ -2343,6 +2343,10 @@ textarea:focus::placeholder {
   position: relative;
 }
 
+.menu__item--sub-menu:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
 .menu__item.active .menu__link::before {
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
