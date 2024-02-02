@@ -6533,7 +6533,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .theme-slider-btn:active {
-    background-color: #525252;
+    background-color: #0d0d0d;
     border: 0.0625rem solid transparent;
     color: #ffffff;
   }
@@ -6585,7 +6585,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .theme-slider-btn:hover {
-    background-color: #525252;
+    background-color: #0d0d0d;
     border: 0.0625rem solid transparent;
     color: #ffffff;
   }
