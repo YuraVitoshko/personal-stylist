@@ -282,34 +282,32 @@ h6 {
   height: 2px;
   width: 18px;
   border-radius: 20px;
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  transition: -webkit-transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s !important;
+  transition: all 0.5s ease 0s !important;
 }
 
 ._spoller-init .spollers__title span::before {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
+  -webkit-transform: translate(0, 0) !important;
+      -ms-transform: translate(0, 0) !important;
+          transform: translate(0, 0) !important;
 }
 
 ._spoller-init .spollers__title span::after {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg) !important;
+      -ms-transform: rotate(-90deg) !important;
+          transform: rotate(-90deg) !important;
 }
 
 ._spoller-init .spollers__title._spoller-active span::before {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg) !important;
+      -ms-transform: rotate(-45deg) !important;
+          transform: rotate(-45deg) !important;
 }
 
 ._spoller-init .spollers__title._spoller-active span::after {
-  -webkit-transform: rotate(-135deg);
-      -ms-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg) !important;
+      -ms-transform: rotate(-135deg) !important;
+          transform: rotate(-135deg) !important;
 }
 
 .spollers__title._watcher-view {
@@ -678,7 +676,7 @@ textarea:focus::placeholder {
 }
 
 .iti--inline-dropdown .iti__country-list {
-  max-height: 185px !important;
+  max-height: 185px;
 }
 
 .iti--flexible-dropdown-width .iti__country-list {
