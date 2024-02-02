@@ -4866,7 +4866,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .social-header__link:active {
-    color: #ffffff;
+    color: #e6e6e6;
   }
 
   .social-header__link:active::before {
