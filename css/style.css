@@ -664,6 +664,7 @@ textarea:focus::placeholder {
 }
 
 .iti__search-input {
+  border-radius: 0 !important;
   width: 100%;
   padding: 8px 16px;
 }
