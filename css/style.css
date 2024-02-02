@@ -269,8 +269,8 @@ h6 {
           flex: 0 0 1.5rem;
   width: 1.5rem;
   height: 1.5rem;
-  -webkit-transition: all 0.3s ease 0s !important;
-  transition: all 0.3s ease 0s !important;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 ._spoller-init .spollers__title span::before,
@@ -282,20 +282,22 @@ h6 {
   height: 2px;
   width: 18px;
   border-radius: 20px;
-  -webkit-transition: all 0.5s ease 0s !important;
-  transition: all 0.5s ease 0s !important;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 
 ._spoller-init .spollers__title span::before {
-  -webkit-transform: translate(0, 0) !important;
-      -ms-transform: translate(0, 0) !important;
-          transform: translate(0, 0) !important;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 ._spoller-init .spollers__title span::after {
-  -webkit-transform: rotate(-90deg) !important;
-      -ms-transform: rotate(-90deg) !important;
-          transform: rotate(-90deg) !important;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 ._spoller-init .spollers__title._spoller-active span::before {
