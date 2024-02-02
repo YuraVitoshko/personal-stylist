@@ -2248,12 +2248,6 @@ textarea:focus::placeholder {
           align-items: center;
 }
 
-.header__social {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 13.125rem;
-          flex: 0 0 13.125rem;
-}
-
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3099,7 +3093,7 @@ textarea:focus::placeholder {
 
 .testmonials {
   padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 12rem;
 }
 
 .testmonials__header {
@@ -3296,7 +3290,7 @@ textarea:focus::placeholder {
 }
 
 .instagram {
-  padding-top: 6rem;
+  padding-top: 12rem;
   padding-bottom: 6rem;
 }
 
@@ -3387,7 +3381,7 @@ textarea:focus::placeholder {
 
 .questions {
   padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 12rem;
 }
 
 .questions__header {
@@ -4871,6 +4865,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     color: #ffffff;
   }
 
+  .social-header__span {
+    color: #e6e6e6;
+  }
+
+  .social-header__span:active {
+    color: #ffffff;
+  }
+
   .icon-menu::before {
     background: url(../img/icons/burger-open-dark.svg) 0 0/contain no-repeat;
   }
@@ -4894,6 +4896,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .social-header__link:active {
+    color: #0d0d0d;
+  }
+
+  .social-header__span {
+    color: #262626;
+  }
+
+  .social-header__span:active {
     color: #0d0d0d;
   }
 
@@ -4942,7 +4952,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 7.5rem;
+    gap: 3.75rem;
     opacity: 0;
     overflow: auto;
     -webkit-transition: all 0.8s ease 0s;
@@ -5055,6 +5065,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     gap: 0.375rem;
     position: relative;
     list-style: none;
+  }
+
+  .spoller-menu__title:not(:last-child) {
+    margin-bottom: 0.625rem;
   }
 
   .spoller-menu__title::marker,
@@ -5388,7 +5402,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .testmonials {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
   }
 
   .testmonials__header:not(:last-child) {
@@ -5411,7 +5425,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .instagram {
-    padding-top: 5rem;
+    padding-top: 10rem;
     padding-bottom: 5rem;
   }
 
@@ -5421,7 +5435,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .questions {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
   }
 
   .questions__header:not(:last-child) {
