@@ -465,6 +465,7 @@ h6 {
 .card-services__button {
   -ms-grid-column-align: center;
       justify-self: center;
+  padding: 0.14375rem 1.3125rem;
 }
 
 .card-description {
@@ -502,6 +503,80 @@ h6 {
 
 .card-description__text--pt {
   padding-top: 1.25rem;
+}
+
+.card-testmonials {
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card-testmonials--padding {
+  gap: 2.5rem;
+  padding: 3.75rem 10rem;
+}
+
+.card-testmonials__icon {
+  text-align: right;
+}
+
+.card-testmonials__bloquote {
+  text-align: center;
+  font-style: italic;
+  line-height: 1.55;
+  max-width: 20rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.card-testmonials__bloquote--width {
+  min-width: 100%;
+}
+
+.author-testmonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.author-testmonials__avatar {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 3.125rem;
+  overflow: hidden;
+}
+
+.author-testmonials__avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.author-testmonials__box {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.author-testmonials__name {
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.author-testmonials__nickname {
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 
 input[type=text],
@@ -2468,8 +2543,8 @@ textarea:focus::placeholder {
 }
 
 .hero__title._watcher-view {
-  -webkit-animation: title-hero 0.8s ease 0.1s forwards;
-          animation: title-hero 0.8s ease 0.1s forwards;
+  -webkit-animation: title-hero 0.8s ease 0.3s forwards;
+          animation: title-hero 0.8s ease 0.3s forwards;
   -webkit-transform: translateY(10%);
       -ms-transform: translateY(10%);
           transform: translateY(10%);
@@ -2500,8 +2575,8 @@ textarea:focus::placeholder {
 }
 
 .hero__text._watcher-view {
-  -webkit-animation: text-hero 0.8s ease 0.2s forwards;
-          animation: text-hero 0.8s ease 0.2s forwards;
+  -webkit-animation: text-hero 0.8s ease 0.5s forwards;
+          animation: text-hero 0.8s ease 0.5s forwards;
   -webkit-transform: translateY(15%);
       -ms-transform: translateY(15%);
           transform: translateY(15%);
@@ -2530,8 +2605,8 @@ textarea:focus::placeholder {
 }
 
 .hero__btn-box._watcher-view {
-  -webkit-animation: button-hero 0.8s ease 0.3s forwards;
-          animation: button-hero 0.8s ease 0.3s forwards;
+  -webkit-animation: button-hero 0.8s ease 0.7s forwards;
+          animation: button-hero 0.8s ease 0.7s forwards;
   -webkit-transform: translateY(10%);
       -ms-transform: translateY(10%);
           transform: translateY(10%);
@@ -2577,8 +2652,8 @@ textarea:focus::placeholder {
 }
 
 .hero__image--left._watcher-view {
-  -webkit-animation: image-left-hero 0.8s ease 0.4s forwards;
-          animation: image-left-hero 0.8s ease 0.4s forwards;
+  -webkit-animation: image-left-hero 0.8s ease 0.9s forwards;
+          animation: image-left-hero 0.8s ease 0.9s forwards;
   -webkit-transform: translateX(-10%);
       -ms-transform: translateX(-10%);
           transform: translateX(-10%);
@@ -2601,8 +2676,8 @@ textarea:focus::placeholder {
 }
 
 .hero__image--right._watcher-view {
-  -webkit-animation: image-right-hero 0.8s ease 0.5s forwards;
-          animation: image-right-hero 0.8s ease 0.5s forwards;
+  -webkit-animation: image-right-hero 0.8s ease 1.1s forwards;
+          animation: image-right-hero 0.8s ease 1.1s forwards;
   -webkit-transform: translateX(10%);
       -ms-transform: translateX(10%);
           transform: translateX(10%);
@@ -2829,6 +2904,10 @@ textarea:focus::placeholder {
   padding-bottom: 6rem;
 }
 
+.my-services--padding {
+  padding-top: 12rem;
+}
+
 .my-services__header {
   opacity: 0;
   -webkit-transform: translateY(10%);
@@ -2874,6 +2953,10 @@ textarea:focus::placeholder {
 .case {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.case--padding {
+  padding-top: 12rem;
 }
 
 .case__header {
@@ -3154,75 +3237,6 @@ textarea:focus::placeholder {
   gap: 5rem;
 }
 
-.card-testmonials {
-  padding: 1.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.25rem;
-}
-
-.card-testmonials__icon {
-  text-align: right;
-}
-
-.card-testmonials__bloquote {
-  text-align: center;
-  font-style: italic;
-  line-height: 1.55;
-  max-width: 20rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.card-testmonials__bloquote--width {
-  min-width: 100%;
-}
-
-.author-testmonials {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.25rem;
-}
-
-.author-testmonials__avatar {
-  width: 3.75rem;
-  height: 3.75rem;
-  border-radius: 3.125rem;
-  overflow: hidden;
-}
-
-.author-testmonials__avatar img {
-  width: 100%;
-  height: 100%;
-}
-
-.author-testmonials__box {
-  display: -ms-grid;
-  display: grid;
-  gap: 0.625rem;
-}
-
-.author-testmonials__name {
-  font-weight: 500;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
-
-.author-testmonials__nickname {
-  font-size: 0.875rem;
-  line-height: 1.4;
-}
-
 .contacts {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -3292,6 +3306,10 @@ textarea:focus::placeholder {
 .instagram {
   padding-top: 12rem;
   padding-bottom: 6rem;
+}
+
+.instagram--padding {
+  padding-top: 6rem;
 }
 
 .instagram__header {
@@ -3665,7 +3683,7 @@ textarea:focus::placeholder {
 
 .you-get {
   padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 12rem;
 }
 
 .you-get__header {
@@ -3729,7 +3747,7 @@ textarea:focus::placeholder {
 }
 
 .cases-hero {
-  padding-bottom: 6rem;
+  padding-bottom: 12rem;
 }
 
 .cases-hero__header {
@@ -3931,7 +3949,7 @@ textarea:focus::placeholder {
 
 .gallery {
   padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 12rem;
 }
 
 .gallery__header {
@@ -4810,7 +4828,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .hero {
-    padding-top: 11.125rem;
+    padding-top: 10.625rem;
   }
 
   .hero__title {
@@ -4833,12 +4851,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-bottom: 5rem;
   }
 
+  .about-me--pt {
+    padding-top: 10.625rem;
+  }
+
   .services-hero {
-    padding-top: 11.125rem;
+    padding-top: 10.625rem;
   }
 
   .cases-hero {
-    padding-top: 11.125rem;
+    padding-top: 10.625rem;
   }
 }
 
@@ -4927,6 +4949,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 61.99875em) {
+  .card-testmonials--padding {
+    padding: 2.5rem 6.25rem;
+  }
+
   .header__actions {
     -webkit-column-gap: 1.875rem;
        -moz-column-gap: 1.875rem;
@@ -5309,6 +5335,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             flex: 1 1 auto;
   }
 
+  .card-testmonials--padding {
+    gap: 1.25rem;
+    padding: 2.5rem 1.25rem;
+  }
+
   .footer {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -5358,6 +5389,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-bottom: 5rem;
   }
 
+  .my-services--padding {
+    padding-top: 10rem;
+  }
+
   .my-services__header:not(:last-child) {
     margin-bottom: 3.75rem;
   }
@@ -5376,6 +5411,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .case {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .case--padding {
+    padding-top: 10rem;
   }
 
   .case__header:not(:last-child) {
@@ -5453,7 +5492,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .you-get {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
   }
 
   .you-get__header:not(:last-child) {
@@ -5471,7 +5510,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .cases-hero {
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
   }
 
   .cases-hero__header:not(:last-child) {
@@ -5508,7 +5547,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .gallery {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
   }
 
   .gallery__header:not(:last-child) {
@@ -5548,8 +5587,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .hero__image--right._watcher-view {
-    -webkit-animation: image-right-hero-width 0.8s ease 0.5s forwards;
-            animation: image-right-hero-width 0.8s ease 0.5s forwards;
+    -webkit-animation: image-right-hero-width 0.8s ease 0.9s forwards;
+            animation: image-right-hero-width 0.8s ease 0.9s forwards;
     -webkit-transform: translateY(10%);
         -ms-transform: translateY(10%);
             transform: translateY(10%);
@@ -5667,6 +5706,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .hero__images:not(:last-child) {
     margin-bottom: 2.5rem;
+  }
+
+  .about-me--pt {
+    padding-top: 7.5rem;
   }
 
   .services-hero {
@@ -5787,15 +5830,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     }
 }
 
-@supports (padding-top: clamp( 7.5rem , 5.8928571429rem  +  7.1428571429vw , 11.125rem )) {
+@supports (padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem )) {
     .hero {
-      padding-top: clamp( 7.5rem , 5.8928571429rem  +  7.1428571429vw , 11.125rem );
+      padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem );
     }
 }
 
-@supports not (padding-top: clamp( 7.5rem , 5.8928571429rem  +  7.1428571429vw , 11.125rem )) {
+@supports not (padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem )) {
     .hero {
-      padding-top: calc(7.5rem + 3.625 * (100vw - 22.5rem) / 50.75);
+      padding-top: calc(7.5rem + 3.125 * (100vw - 22.5rem) / 50.75);
     }
 }
 
@@ -5859,27 +5902,39 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     }
 }
 
-@supports (padding-top: clamp( 7.5rem , 5.8928571429rem  +  7.1428571429vw , 11.125rem )) {
+@supports (padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem )) {
+    .about-me--pt {
+      padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem );
+    }
+}
+
+@supports not (padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem )) {
+    .about-me--pt {
+      padding-top: calc(7.5rem + 3.125 * (100vw - 22.5rem) / 50.75);
+    }
+}
+
+@supports (padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem )) {
     .services-hero {
-      padding-top: clamp( 7.5rem , 5.8928571429rem  +  7.1428571429vw , 11.125rem );
+      padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem );
     }
 }
 
-@supports not (padding-top: clamp( 7.5rem , 5.8928571429rem  +  7.1428571429vw , 11.125rem )) {
+@supports not (padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem )) {
     .services-hero {
-      padding-top: calc(7.5rem + 3.625 * (100vw - 22.5rem) / 50.75);
+      padding-top: calc(7.5rem + 3.125 * (100vw - 22.5rem) / 50.75);
     }
 }
 
-@supports (padding-top: clamp( 7.5rem , 5.8928571429rem  +  7.1428571429vw , 11.125rem )) {
+@supports (padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem )) {
     .cases-hero {
-      padding-top: clamp( 7.5rem , 5.8928571429rem  +  7.1428571429vw , 11.125rem );
+      padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem );
     }
 }
 
-@supports not (padding-top: clamp( 7.5rem , 5.8928571429rem  +  7.1428571429vw , 11.125rem )) {
+@supports not (padding-top: clamp( 7.5rem , 6.1145320197rem  +  6.157635468vw , 10.625rem )) {
     .cases-hero {
-      padding-top: calc(7.5rem + 3.625 * (100vw - 22.5rem) / 50.75);
+      padding-top: calc(7.5rem + 3.125 * (100vw - 22.5rem) / 50.75);
     }
 }
 }
