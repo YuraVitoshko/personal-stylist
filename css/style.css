@@ -269,8 +269,8 @@ h6 {
           flex: 0 0 1.5rem;
   width: 1.5rem;
   height: 1.5rem;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s !important;
+  transition: all 0.3s ease 0s !important;
 }
 
 ._spoller-init .spollers__title span::before,
