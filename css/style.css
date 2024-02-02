@@ -2337,6 +2337,10 @@ textarea:focus::placeholder {
           column-gap: 0.9375rem;
 }
 
+.social-header__link span {
+  display: none;
+}
+
 .langs-header__btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -4374,8 +4378,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .lg-show-in .lg-prev,
 .lg-show-in .lg-next,
 .lg-show-in .lg-pager-outer {
-  opacity: 1 !important;
-  visibility: visible !important;
+  opacity: 1;
 }
 
 .lg-show-in.lg-hide-sub-html .lg-sub-html {
@@ -4946,16 +4949,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     line-height: 1.5;
   }
 
-  .social-header__link:nth-child(1)::after {
-    content: "Instagram";
-  }
-
-  .social-header__link:nth-child(2)::after {
-    content: "Telegram";
-  }
-
   .social-header__link:active {
     color: #ffffff;
+  }
+
+  .social-header__link span {
+    display: inline-block;
   }
 
   .spoller-menu {
