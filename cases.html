@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240201210822">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240202161725">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,14 +61,14 @@
 						</ul>
 					</nav>
 				</div>
-				<div data-da=".menu__body, 992" class="header__actions">
+				<div data-da=".menu__body, 991.98" class="header__actions">
 					<div class="header__social social-header">
 						<a href="#" class="social-header__link _icon-insta"></a>
 						<a href="#" class="social-header__link _icon-telegram"></a>
 					</div>
 					<div class="header__langs langs-header theme-block-border">
-						<button class="langs-header__btn">UA</button>
-						<button class="langs-header__btn">EN</button>
+						<button class="langs-header__btn _active" id="lang-uk"><span>UA</span></button>
+						<button class="langs-header__btn" id="lang-en"><span>EN</span></button>
 					</div>
 				</div>
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
@@ -331,7 +331,7 @@
 						</div>
 					</div>
 					<div data-watch data-watch-once data-watch-treshold="0.3" class="instagram__btn-box">
-						<a href="#" class="instagram__button button theme-btn _icon-insta">Instagram</a>
+						<a href="#" class="instagram__button button theme-btn-border _icon-insta">Instagram</a>
 					</div>
 				</div>
 			</section>
@@ -346,62 +346,62 @@
 						<details class="spollers__item theme-border-bottom theme-block-background">
 							<summary data-watch data-watch-once data-watch-treshold="0.3" class="spollers__title theme-spoller-text">Чи
 								потрібно готуватися до персонального шопінгу? <span></span></summary>
-							<div class="spollers__body theme-testmonials-text">Кожна консультація індивідуальна, але в середньому займає
+							<div class="spollers__body theme-text-nickname">Кожна консультація індивідуальна, але в середньому займає
 								3-4 години.</div>
 						</details>
 						<details class="spollers__item theme-border-bottom theme-block-background">
 							<summary data-watch data-watch-once data-watch-treshold="0.3" class="spollers__title theme-spoller-text">Як
 								довго триває консультація з розбором гардеробу? <span></span></summary>
-							<div class="spollers__body theme-testmonials-text">
+							<div class="spollers__body theme-text-nickname">
 								Кожна консультація індивідуальна, але в середньому займає 3-4 години.
 							</div>
 						</details>
 						<details class="spollers__item theme-border-bottom theme-block-background">
 							<summary data-watch data-watch-once data-watch-treshold="0.3" class="spollers__title theme-spoller-text">Як
 								формується капсульний гардероб? <span></span></summary>
-							<div class="spollers__body theme-testmonials-text">Кожна консультація індивідуальна, але в середньому займає
+							<div class="spollers__body theme-text-nickname">Кожна консультація індивідуальна, але в середньому займає
 								3-4 години.</div>
 						</details>
 						<details class="spollers__item theme-border-bottom theme-block-background">
 							<summary data-watch data-watch-once data-watch-treshold="0.3" class="spollers__title theme-spoller-text">Чи
 								можу я розраховувати на консультацію онлайн? <span></span></summary>
-							<div class="spollers__body theme-testmonials-text">Кожна консультація індивідуальна, але в середньому займає
+							<div class="spollers__body theme-text-nickname">Кожна консультація індивідуальна, але в середньому займає
 								3-4 години.</div>
 						</details>
 						<details class="spollers__item theme-border-bottom theme-block-background">
 							<summary data-watch data-watch-once data-watch-treshold="0.3" class="spollers__title theme-spoller-text">Які
 								критерії вибору одягу для стилізації фотосесій? <span></span></summary>
-							<div class="spollers__body theme-testmonials-text">Кожна консультація індивідуальна, але в середньому займає
+							<div class="spollers__body theme-text-nickname">Кожна консультація індивідуальна, але в середньому займає
 								3-4 години.</div>
 						</details>
 						<details class="spollers__item theme-border-bottom theme-block-background">
 							<summary data-watch data-watch-once data-watch-treshold="0.3" class="spollers__title theme-spoller-text">Чи
 								можна звернутися за консультацією, якщо я новачок у моді? <span></span></summary>
-							<div class="spollers__body theme-testmonials-text">Кожна консультація індивідуальна, але в середньому займає
+							<div class="spollers__body theme-text-nickname">Кожна консультація індивідуальна, але в середньому займає
 								3-4 години.</div>
 						</details>
 						<details class="spollers__item theme-border-bottom theme-block-background">
 							<summary data-watch data-watch-once data-watch-treshold="0.3" class="spollers__title theme-spoller-text">Чи
 								змінюються мої витрати на одяг після консультації? <span></span></summary>
-							<div class="spollers__body theme-testmonials-text">Кожна консультація індивідуальна, але в середньому займає
+							<div class="spollers__body theme-text-nickname">Кожна консультація індивідуальна, але в середньому займає
 								3-4 години.</div>
 						</details>
 						<details class="spollers__item theme-border-bottom theme-block-background">
 							<summary data-watch data-watch-once data-watch-treshold="0.3" class="spollers__title theme-spoller-text">Чи
 								можу я отримати поради щодо аксесуарів? <span></span></summary>
-							<div class="spollers__body theme-testmonials-text">Кожна консультація індивідуальна, але в середньому займає
+							<div class="spollers__body theme-text-nickname">Кожна консультація індивідуальна, але в середньому займає
 								3-4 години.</div>
 						</details>
 						<details class="spollers__item theme-border-bottom theme-block-background">
 							<summary data-watch data-watch-once data-watch-treshold="0.3" class="spollers__title theme-spoller-text">Чи
 								є можливість отримати персоналізовані рекомендації? <span></span></summary>
-							<div class="spollers__body theme-testmonials-text">Кожна консультація індивідуальна, але в середньому займає
+							<div class="spollers__body theme-text-nickname">Кожна консультація індивідуальна, але в середньому займає
 								3-4 години.</div>
 						</details>
 						<details class="spollers__item theme-border-bottom theme-block-background">
 							<summary data-watch data-watch-once data-watch-treshold="0.3" class="spollers__title theme-spoller-text">Як
 								я можу записатися на консультацію? <span></span></summary>
-							<div class="spollers__body theme-testmonials-text">Кожна консультація індивідуальна, але в середньому займає
+							<div class="spollers__body theme-text-nickname">Кожна консультація індивідуальна, але в середньому займає
 								3-4 години.</div>
 						</details>
 					</div>
@@ -431,7 +431,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240201210822"></script>
+	<script src="js/app.min.js?_v=20240202161725"></script>
 </body>
 
 </html>

@@ -6927,6 +6927,14 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
             }
         }));
+        document.getElementById("lang-uk").addEventListener("click", (function() {
+            document.getElementById("lang-uk").classList.add("_active");
+            document.getElementById("lang-en").classList.remove("_active");
+        }));
+        document.getElementById("lang-en").addEventListener("click", (function() {
+            document.getElementById("lang-en").classList.add("_active");
+            document.getElementById("lang-uk").classList.remove("_active");
+        }));
         window["FLS"] = false;
         isWebp();
         menuInit();
