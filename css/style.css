@@ -4875,8 +4875,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     color: #e6e6e6;
   }
 
+  .social-header__link::before {
+    color: #e6e6e6;
+  }
+
   .social-header__link:active {
     color: #ffffff;
+  }
+
+  .social-header__link:active::before {
+    color: #e6e6e6;
   }
 
   .social-header__span {
@@ -4906,8 +4914,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     color: #262626;
   }
 
+  .social-header__link::before {
+    color: #262626;
+  }
+
   .social-header__link:active {
     color: #0d0d0d;
+  }
+
+  .social-header__link:active::before {
+    color: #262626;
   }
 
   .social-header__span {
