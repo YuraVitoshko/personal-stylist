@@ -309,20 +309,21 @@ h6 {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  will-change: transform;
+  will-change: transform, color, background-color;
 }
 
 ._spoller-init .spollers__title._spoller-active span::after {
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
-  will-change: transform;
+  will-change: transform, color, background-color;
 }
 
 .spollers__title._watcher-view {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
+  will-change: transform;
   opacity: 1;
 }
 
