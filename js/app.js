@@ -6925,6 +6925,11 @@ PERFORMANCE OF THIS SOFTWARE.
             separateDialCode: true,
             utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.15/build/js/utils.js"
         });
+        phone.addEventListener("input", (function(event) {
+            let inputValue = event.target.value;
+            let numericValue = inputValue.replace(/\D/g, "");
+            if (inputValue !== numericValue) event.target.value = numericValue;
+        }));
         document.addEventListener("DOMContentLoaded", (function() {
             let subMenus = document.querySelectorAll(".menu__item--sub-menu");
             subMenus.forEach((function(menuItem) {
