@@ -332,12 +332,11 @@ h6 {
 ._spoller-init .spollers__title span {
   margin-top: 0.1875rem;
   position: relative;
-  padding: 0.25rem;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 1.5rem;
-          flex: 0 0 1.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
+      -ms-flex: 0 0 1.125rem;
+          flex: 0 0 1.125rem;
+  width: 1.125rem;
+  height: 1.125rem;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -357,28 +356,16 @@ h6 {
   transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 
-._spoller-init .spollers__title span::before {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
 ._spoller-init .spollers__title span::after {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-._spoller-init .spollers__title._spoller-active span::before {
+._spoller-init .spollers__title._spoller-active span {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-}
-
-._spoller-init .spollers__title._spoller-active span::after {
-  -webkit-transform: rotate(-135deg);
-      -ms-transform: rotate(-135deg);
-          transform: rotate(-135deg);
 }
 
 .spollers__title._watcher-view {
