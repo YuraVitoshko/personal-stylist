@@ -247,7 +247,6 @@ h6 {
   -webkit-transform: translateY(10%);
       -ms-transform: translateY(10%);
           transform: translateY(10%);
-  will-change: transform;
   -webkit-transition: all 0.8s ease 0.1s;
   transition: all 0.8s ease 0.1s;
 }
@@ -272,7 +271,6 @@ h6 {
   height: 1.5rem;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  will-change: transform, color, background-color;
 }
 
 ._spoller-init .spollers__title span::before,
@@ -288,42 +286,36 @@ h6 {
   transition: -webkit-transform 0.5s ease 0s;
   transition: transform 0.5s ease 0s;
   transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
-  will-change: transform, color, background-color;
 }
 
 ._spoller-init .spollers__title span::before {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
-  will-change: transform, color, background-color;
 }
 
 ._spoller-init .spollers__title span::after {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  will-change: transform, color, background-color;
 }
 
 ._spoller-init .spollers__title._spoller-active span::before {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  will-change: transform, color, background-color;
 }
 
 ._spoller-init .spollers__title._spoller-active span::after {
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
-  will-change: transform, color, background-color;
 }
 
 .spollers__title._watcher-view {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
-  will-change: transform;
   opacity: 1;
 }
 
@@ -6244,6 +6236,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     background-color: #0a0a0a;
   }
 
+  .spollers__title:active span {
+    background-color: #fff;
+  }
+
+  .spollers__title:active span::before,
+  .spollers__title:active span::after {
+    background-color: #0a0a0a;
+  }
+
   .cases-hero-tabs__name {
     color: #ffffff;
     background-color: #080808;
@@ -6565,6 +6566,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   ._spoller-init .spollers__title._spoller-active span::before,
   ._spoller-init .spollers__title._spoller-active span::after {
+    background-color: #fff;
+  }
+
+  .spollers__title:active span {
+    background-color: #0a0a0a;
+  }
+
+  .spollers__title:active span::before,
+  .spollers__title:active span::after {
     background-color: #fff;
   }
 
