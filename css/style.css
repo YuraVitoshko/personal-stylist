@@ -6555,6 +6555,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     border: 0.0625rem solid #BFBFBF;
   }
 
+  ._spoller-init .spollers__title span {
+    background-color: #fff;
+  }
+
   ._spoller-init .spollers__title span::before,
   ._spoller-init .spollers__title span::after {
     background-color: #0a0a0a;
@@ -6566,15 +6570,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   ._spoller-init .spollers__title._spoller-active span::before,
   ._spoller-init .spollers__title._spoller-active span::after {
-    background-color: #fff;
-  }
-
-  .spollers__title:active span {
-    background-color: #0a0a0a;
-  }
-
-  .spollers__title:active span::before,
-  .spollers__title:active span::after {
     background-color: #fff;
   }
 
