@@ -272,6 +272,7 @@ h6 {
   height: 1.5rem;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  will-change: transform, color, background-color;
 }
 
 ._spoller-init .spollers__title span::before,
@@ -287,31 +288,35 @@ h6 {
   transition: -webkit-transform 0.5s ease 0s;
   transition: transform 0.5s ease 0s;
   transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
-  will-change: transform;
+  will-change: transform, color, background-color;
 }
 
 ._spoller-init .spollers__title span::before {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
+  will-change: transform, color, background-color;
 }
 
 ._spoller-init .spollers__title span::after {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
+  will-change: transform, color, background-color;
 }
 
 ._spoller-init .spollers__title._spoller-active span::before {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  will-change: transform;
 }
 
 ._spoller-init .spollers__title._spoller-active span::after {
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
+  will-change: transform;
 }
 
 .spollers__title._watcher-view {
@@ -2284,17 +2289,19 @@ textarea:focus::placeholder {
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .header._header-scroll {
   position: fixed;
-  top: -200%;
+  top: -100%;
   opacity: 0;
 }
 
 .header._header-show {
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
   opacity: 1;
   top: 0;
 }
