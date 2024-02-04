@@ -2307,6 +2307,7 @@ textarea:focus::placeholder {
 }
 
 .header__container {
+  min-height: 5.625rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   display: -webkit-box;
@@ -4837,10 +4838,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-bottom: 1.25rem;
   }
 
-  .header__container {
-    min-height: 5.625rem;
-  }
-
   .header__actions {
     -webkit-column-gap: 4rem;
        -moz-column-gap: 4rem;
@@ -5029,6 +5026,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     left: 0;
     opacity: 0;
     width: 100%;
+    min-height: 5.625rem;
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
   }
@@ -5178,7 +5176,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: inline-flex;
     position: relative;
     width: 1.875rem;
-    height: 1.125rem;
+    height: 0.6875rem;
     z-index: 5;
   }
 
@@ -5190,15 +5188,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     right: 0;
     position: absolute;
     width: 100%;
-    height: 0.125rem;
   }
 
   .icon-menu::before {
-    top: 0;
+    top: -0.25rem;
+    height: 0.0625rem;
   }
 
   .icon-menu span {
     top: calc(50% - 0.0625rem);
+    height: 0.125rem;
   }
 
   .menu-open .icon-menu span {
@@ -5213,6 +5212,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
+    height: 0.125rem;
   }
 
   .footer__top {
@@ -5324,9 +5324,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
-@media (max-width: 61.99875em) and (max-width: 22.5em) {
+@media (max-width: 61.99875em) and (max-width: 47.99875em) {
   .menu__body::before {
-    min-height: 5rem;
+    min-height: 4.5rem;
   }
 }
 
@@ -5376,6 +5376,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .card-testmonials--padding {
     gap: 1.25rem;
     padding: 2.5rem 1.25rem;
+  }
+
+  .header__container {
+    min-height: 4.5rem;
+  }
+
+  .header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 10.5rem;
+            flex: 0 0 10.5rem;
   }
 
   .footer {
@@ -5718,10 +5728,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-bottom: 0.625rem;
   }
 
-  .header__container {
-    min-height: 5rem;
-  }
-
   .hero {
     padding-top: 7.5rem;
   }
@@ -5853,18 +5859,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @supports not (padding-bottom: clamp( 0.625rem , 0.3479064039rem  +  1.2315270936vw , 1.25rem )) {
     .card-services__title {
       padding-bottom: calc(0.625rem + 0.625 * (100vw - 22.5rem) / 50.75);
-    }
-}
-
-@supports (min-height: clamp( 5rem , 4.7229064039rem  +  1.2315270936vw , 5.625rem )) {
-    .header__container {
-      min-height: clamp( 5rem , 4.7229064039rem  +  1.2315270936vw , 5.625rem );
-    }
-}
-
-@supports not (min-height: clamp( 5rem , 4.7229064039rem  +  1.2315270936vw , 5.625rem )) {
-    .header__container {
-      min-height: calc(5rem + 0.625 * (100vw - 22.5rem) / 50.75);
     }
 }
 
@@ -6025,26 +6019,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
       -webkit-column-gap: calc(1.875rem + 0.625 * (100vw - 61.99875rem) / 11.25125);
          -moz-column-gap: calc(1.875rem + 0.625 * (100vw - 61.99875rem) / 11.25125);
               column-gap: calc(1.875rem + 0.625 * (100vw - 61.99875rem) / 11.25125);
-    }
-}
-}
-
-@media (max-width: 61.99875em) and (min-width: 73.25em) {
-  .menu__body::before {
-    min-height: 5.625rem;
-  }
-}
-
-@media (max-width: 61.99875em) and (min-width: 22.5em) and (max-width: 73.25em) {
-@supports (min-height: clamp( 5rem , 4.7229064039rem  +  1.2315270936vw , 5.625rem )) {
-    .menu__body::before {
-      min-height: clamp( 5rem , 4.7229064039rem  +  1.2315270936vw , 5.625rem );
-    }
-}
-
-@supports not (min-height: clamp( 5rem , 4.7229064039rem  +  1.2315270936vw , 5.625rem )) {
-    .menu__body::before {
-      min-height: calc(5rem + 0.625 * (100vw - 22.5rem) / 50.75);
     }
 }
 }
